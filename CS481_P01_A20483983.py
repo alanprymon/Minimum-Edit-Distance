@@ -121,7 +121,7 @@ if __name__ == '__main__':
             possible = [x]
             lowest = result
 
-
+    possible.sort(key=lambda x: x.lower())
     end = timeit.default_timer()
     print('Prymon, Alan, A20483983 solution:\nWeights: ' + str(int(weights)) + '\nMisspelled word: ' + inputword)
     print('\nProcessing time: ' + '{0:.3f}'.format(end - start) + ' seconds')

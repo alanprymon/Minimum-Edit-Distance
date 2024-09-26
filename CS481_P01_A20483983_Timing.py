@@ -122,7 +122,7 @@ def run_function (arg1 : str, arg2 : str) -> float:
 if __name__ == '__main__':
     num_to_char = {0:'a', 1:'b', 2:'c', 3:'d', 4:'e', 5:'f', 6:'g', 7:'h', 8:'i', 9:'j', 10:'k', 11:'l', 12:'m', 13:'n', 14:'o', 15:'p', 16:'q', 17:'r', 18:'s', 19:'t', 20:'u', 21:'v', 22:'w', 23:'x', 24:'y', 25:'z'}
     num_chars = 10
-    num_tests = 5
+    num_tests = 10
     average = []
     for i in range(1, num_chars + 1):
         average.append(0.0)
@@ -131,6 +131,6 @@ if __name__ == '__main__':
             for x in range(i):
                 input = input + num_to_char[random.randint(0, 25)]
             average[i - 1] = average[i - 1] + run_function(0, input)
-    for i in range(len(num_chars)):
+    for i in range(num_chars):
         average[i] = average[i] / num_tests
     print(average)
